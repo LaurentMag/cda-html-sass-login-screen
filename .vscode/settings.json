@@ -1,0 +1,15 @@
+{
+  "files.exclude": {
+    "tile.png": true,
+    "tile-wide.png": true,
+    "site.webmanifest": true,
+    "robots.txt": true,
+    "package.json": true,
+    "LICENSE.txt": true,
+    "humans.txt": true,
+    "favicon.ico": true,
+    "browserconfig.xml": true,
+    "404.html": true,
+    "doc": true
+  }
+}

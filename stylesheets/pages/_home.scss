@@ -20,7 +20,8 @@ body {
 }
 
 .container-total {
-  width: min(30rem, 95%);
+  // GENERAL WIDTH MANAGEMENT
+  width: min(35rem, 100%);
   box-shadow: 10px 10px 30px 5px rgba(0, 0, 0, 0.373);
   border-radius: 2rem;
 }
@@ -29,18 +30,23 @@ body {
   display: none;
 }
 
-//____________________________________________________________________________________
-//____________________________________________________________________________________
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 // FLEX
 
 form,
 .login__section-form-inputs {
   @include flex-modulable(column, center, center);
   gap: 1rem;
+
+  width: 100%;
 }
 
-//____________________________________________________________________________________
-//____________________________________________________________________________________
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// GENERAL CONTAINER + TOP IMAGE
+
 .login__container-main {
   @include flex-modulable(column, null, center);
   border-radius: 2rem;
@@ -58,13 +64,17 @@ form,
     min-width: 16rem;
   }
 
-  //________________________________________________________
-  //________________________________________________________
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+  // TITLE TEXT
+
   > div {
     @include flex-modulable(column, null, center);
     margin-block-end: 2.5rem;
 
     // '''''''''''''''''''''''''''''''''''''''''''''
+    // DIVE DOWN WITH US // both <p>
     p {
       font-family: $font-h1;
       letter-spacing: 0.4rem;
@@ -74,6 +84,7 @@ form,
       transform: scale(1, 2);
     }
 
+    // DIVE DOWN
     p:nth-of-type(1) {
       background: url("./../img/87d19b37de41471ba7c3cae0149c8bf0.jpg");
       -webkit-text-fill-color: transparent;
@@ -84,6 +95,7 @@ form,
       margin-block-end: 1rem;
     }
 
+    // WITH US
     p:nth-of-type(2) {
       color: white;
     }
@@ -96,23 +108,28 @@ form,
     }
   }
 
-  //________________________________________________________
-  //________________________________________________________
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+  // FORM PART
+
   .login__section-form {
     color: white;
     margin-block-end: $margin-block-between-section;
 
+    // WHAT MANAGE GENERAL WIDHT LIMIT
     width: 80%;
 
     // '''''''''''''''''''''''''''''''''''''''''''''
+    // BOTH INPUT + UP DOWN LABEL
     .login__section-form-inputs {
-      width: 85%;
       position: relative;
       margin-block-end: 1.3rem;
+
       //:::::::::::::::::::
       input {
-        width: 100%;
         height: 3.2rem;
+        width: 100%;
 
         border-radius: 1.5rem;
         border: none;
@@ -139,10 +156,18 @@ form,
       }
 
       //:::::::::::::::::::
-      label:nth-of-type(1) {
-        margin-block-end: 0.1rem;
+      // BOTH LABELS
+      label {
+        align-self: flex-end;
+        margin-inline-end: 10%;
+
+        font-size: 0.8rem;
+        font-style: italic;
+        font-weight: 500;
       }
-      .label-bottom {
+
+      //:::::::::::::::::::
+      label:nth-of-type(2) {
         position: absolute;
         bottom: -20%;
 
@@ -153,20 +178,14 @@ form,
           color: rgb(206, 212, 209);
         }
       }
-      label {
-        align-self: flex-end;
-        margin-inline-end: 1rem;
-
-        font-size: 0.8rem;
-        font-style: italic;
-        font-weight: 500;
-      }
     }
     // '''''''''''''''''''''''''''''''''''''''''''''
     .btn-form {
       border: none;
-      width: 55%;
+      width: 75%;
       height: 4rem;
+
+      margin-block-start: 1rem;
 
       border-radius: 5rem;
 
@@ -187,8 +206,11 @@ form,
     }
   }
 
-  //________________________________________________________
-  //________________________________________________________
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+  // SOCIAL MEDIA BUTTONS
+
   .login__container-btn-socials {
     @include flex-modulable(column, center, center);
     gap: 5%;
@@ -259,8 +281,8 @@ form,
       }
     }
   }
-  //________________________________________________________
-  //________________________________________________________
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   .no-account {
     padding: 1rem;
     //:::::::::::::::::::
@@ -277,6 +299,19 @@ form,
   }
 }
 
+@media only screen and (min-width: 450px) {
+  .login__container-main {
+    .login__section-form {
+      .login__section-form-inputs {
+        width: 75%;
+      }
+      .btn-form {
+        width: 60%;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .container-total {
     display: flex;
@@ -286,7 +321,7 @@ form,
   }
   .desktop-only-picture-side {
     display: block;
-    width: 30rem;
+    width: 35rem;
 
     img {
       border-radius: 2rem 0 0 2rem;
@@ -295,7 +330,7 @@ form,
   }
 
   .login__container-main {
-    width: 30rem;
+    width: 35rem;
     border-radius: 0 2rem 2rem 0;
   }
 }
