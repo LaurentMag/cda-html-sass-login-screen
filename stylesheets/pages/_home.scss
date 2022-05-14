@@ -11,12 +11,14 @@ body {
 
   padding-block: 2rem;
 
-  // background-image: url("./../img/depositphotos_78802848-stock-illustration-sea-waves-seamless-background.jpg");
-  // background-position: 50% 60%;
-  // background-size: none;
+  background-image: url("./../img/Sea_in_Dream.webp");
+  background-position: 50% 40%;
+  background-size: cover;
 
-  // background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-color: rgb(225, 221, 221);
+
+  // backdrop-filter: contrast(120%) blur(4px) brightness(0.75) saturate(1);
 }
 
 .container-total {
@@ -317,11 +319,11 @@ form,
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: fit-content;
+    width: min(65rem, 100%);
   }
   .desktop-only-picture-side {
     display: block;
-    width: 35rem;
+    width: 50%;
 
     img {
       border-radius: 2rem 0 0 2rem;
@@ -330,7 +332,7 @@ form,
   }
 
   .login__container-main {
-    width: 35rem;
+    width: 50%;
     border-radius: 0 2rem 2rem 0;
   }
 }

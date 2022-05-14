@@ -10,6 +10,9 @@
     "favicon.ico": true,
     "browserconfig.xml": true,
     "404.html": true,
+    "README.md": true,
+    "package-lock.json": true,
+    "icon.png": true,
     "doc": true
   }
 }
