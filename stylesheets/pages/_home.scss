@@ -314,7 +314,17 @@ form,
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 560px) {
+  body {
+    padding: 0rem;
+  }
+
+  .login__container-main {
+    border-radius: 0rem;
+  }
+}
+
+@media only screen and (min-width: 940px) {
   .container-total {
     display: flex;
     flex-direction: row;
