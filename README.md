@@ -1,3 +1,3 @@
-# cda-html-sass-login-screen
+# cda-login-screen
 
-git pages : https://laurentmag.github.io/cda-html-sass-login-screen/
+HTML - SASS usage
