@@ -1,3 +1,5 @@
 # cda-login-screen
 
-HTML - SASS usage
+HTML - SASS - Responsive login screen exercice
+
+https://laurentmag.github.io/cda-login-screen/
